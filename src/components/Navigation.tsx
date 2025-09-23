@@ -27,9 +27,6 @@ const Navigation = () => {
             <span>Free Consultation Available</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link to="/showroom" className="text-muted-foreground hover:text-foreground transition-colors">
-              Visit Showroom
-            </Link>
             <Link to="/samples" className="text-muted-foreground hover:text-foreground transition-colors">
               Order Samples
             </Link>
