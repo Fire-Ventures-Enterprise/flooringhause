@@ -8,71 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Clean, minimalist color palette inspired by TruSa */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 13%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 13%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 13%;
-
-    /* Primary - sophisticated charcoal */
-    --primary: 0 0% 20%;
-    --primary-foreground: 0 0% 100%;
+    /* Premium Flooring Color Palette */
+    --background: 30 20% 98%;
+    --foreground: 30 50% 10%;
+    --card: 30 10% 99%;
+    --card-foreground: 30 50% 10%;
+    --popover: 30 10% 99%;
+    --popover-foreground: 30 50% 10%;
+    --primary: 25 60% 35%;
+    --primary-foreground: 30 10% 98%;
+    --secondary: 35 30% 85%;
+    --secondary-foreground: 30 50% 20%;
+    --muted: 30 10% 92%;
+    --muted-foreground: 30 20% 40%;
+    --accent: 15 70% 50%;
+    --accent-foreground: 30 10% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 25 60% 35%;
+    --radius: 0.5rem;
     
-    /* Secondary - light gray */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 13%;
-
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-
-    /* Accent - warm gold accent */
-    --accent: 36 100% 50%;
-    --accent-foreground: 0 0% 13%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 20%;
-
-    --radius: 0.125rem;
-
-    /* Custom design tokens for minimalist design */
-    --neutral-50: 0 0% 98%;
-    --neutral-100: 0 0% 96%;
-    --neutral-200: 0 0% 90%;
-    --neutral-300: 0 0% 83%;
-    --neutral-400: 0 0% 64%;
-    --neutral-500: 0 0% 45%;
-    --neutral-600: 0 0% 32%;
-    --neutral-700: 0 0% 20%;
-    --neutral-800: 0 0% 13%;
-    --neutral-900: 0 0% 9%;
+    /* Custom Design Tokens */
+    --wood-dark: 30 50% 20%;
+    --wood-medium: 30 40% 40%;
+    --wood-light: 30 30% 60%;
+    --warm-beige: 35 30% 85%;
+    --cream: 40 20% 94%;
+    --charcoal: 30 10% 15%;
+    --warm-white: 40 10% 97%;
     
-    /* Gradients - subtle and professional */
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 99%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 13%), hsl(0 0% 20%));
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(25 60% 35%), hsl(15 70% 50%));
+    --gradient-wood: linear-gradient(180deg, hsl(30 50% 20%), hsl(30 40% 40%));
+    --gradient-subtle: linear-gradient(180deg, hsl(30 20% 98%), hsl(35 30% 85%));
     
-    /* Shadows - minimal and clean */
-    --shadow-xs: 0 1px 2px hsl(0 0% 0% / 0.05);
-    --shadow-sm: 0 1px 3px hsl(0 0% 0% / 0.1);
-    --shadow-md: 0 4px 6px hsl(0 0% 0% / 0.1);
-    --shadow-lg: 0 10px 15px hsl(0 0% 0% / 0.1);
-    --shadow-xl: 0 20px 25px hsl(0 0% 0% / 0.1);
-    
-    /* Typography */
-    --font-display: "Montserrat", system-ui, sans-serif;
-    --font-body: "Inter", system-ui, sans-serif;
-    
-    /* Transitions */
-    --transition-base: all 0.2s ease;
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Shadows */
+    --shadow-soft: 0 2px 8px rgba(139, 69, 19, 0.08);
+    --shadow-medium: 0 4px 16px rgba(139, 69, 19, 0.12);
+    --shadow-large: 0 8px 32px rgba(139, 69, 19, 0.16);
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 13%;
