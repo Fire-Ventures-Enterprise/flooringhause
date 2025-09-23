@@ -10,7 +10,6 @@ const Navigation = () => {
     { name: "Products", href: "#products" },
     { name: "Collections", href: "#collections" },
     { name: "Room Visualizer", href: "#visualizer" },
-    { name: "Installation", href: "#installation" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
