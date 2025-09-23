@@ -1,4 +1,4 @@
-import { BarChart3, Search, Globe, FileSearch, Home } from "lucide-react";
+import { BarChart3, Search, Globe, FileSearch, Home, Package } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
@@ -31,6 +31,11 @@ const menuItems = [
     title: "Site Audit",
     url: "/admin/audit",
     icon: FileSearch,
+  },
+  {
+    title: "Product Management",
+    url: "/admin/products",
+    icon: Package,
   },
 ];
 

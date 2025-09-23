@@ -10,6 +10,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import Rankings from "./pages/admin/Rankings";
 import Competitors from "./pages/admin/Competitors";
 import SiteAudit from "./pages/admin/SiteAudit";
+import Products from "./pages/admin/Products";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="rankings" element={<Rankings />} />
             <Route path="competitors" element={<Competitors />} />
             <Route path="audit" element={<SiteAudit />} />
+            <Route path="products" element={<Products />} />
           </Route>
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
