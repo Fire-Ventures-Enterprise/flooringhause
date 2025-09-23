@@ -73,7 +73,7 @@ const Navigation = () => {
                 0
               </span>
             </Button>
-            <Button variant="hero">Get Quote</Button>
+            <Button variant="minimal">Get Quote</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -105,7 +105,7 @@ const Navigation = () => {
                   <Search className="h-4 w-4 mr-2" />
                   Search
                 </Button>
-                <Button variant="hero" className="flex-1">Get Quote</Button>
+                <Button variant="minimal" className="flex-1">Get Quote</Button>
               </div>
             </div>
           </div>

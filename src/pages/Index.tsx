@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import ProductCategories from "@/components/ProductCategories";
+import TruSaShowcase from "@/components/TruSaShowcase";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import RoomVisualizer from "@/components/RoomVisualizer";
 import Testimonials from "@/components/Testimonials";
@@ -13,6 +14,7 @@ const Index = () => {
       <main>
         <Hero />
         <ProductCategories />
+        <TruSaShowcase />
         <FeaturedProducts />
         <RoomVisualizer />
         <Testimonials />

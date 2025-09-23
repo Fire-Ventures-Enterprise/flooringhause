@@ -162,7 +162,7 @@ const FeaturedProducts = () => {
                         <Button variant="secondary" size="icon" className="rounded-full">
                           <Heart className="h-4 w-4" />
                         </Button>
-                        <Button variant="hero" size="icon" className="rounded-full">
+                        <Button variant="minimal" size="icon" className="rounded-full">
                           <ShoppingCart className="h-4 w-4" />
                         </Button>
                       </div>

@@ -104,7 +104,7 @@ const ProductCategories = () => {
                   <span className="text-lg font-semibold text-foreground">{category.priceRange}</span>
                 </div>
 
-                <Button variant="premium" className="w-full group">
+                <Button variant="outline" className="w-full group">
                   View Collection
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -114,7 +114,7 @@ const ProductCategories = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="hero" size="lg">
+          <Button variant="minimal" size="lg">
             View All Products
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

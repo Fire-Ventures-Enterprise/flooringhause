@@ -22,7 +22,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="bg-warm-white/10 border-warm-white/20 text-warm-white placeholder:text-warm-white/60"
               />
-              <Button variant="hero">
+              <Button variant="accent">
                 Subscribe
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
