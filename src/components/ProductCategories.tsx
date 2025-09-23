@@ -4,53 +4,62 @@ import { ArrowRight } from "lucide-react";
 const categories = [
   {
     id: 1,
-    name: "Hardwood Flooring",
-    description: "Timeless elegance with natural wood beauty",
-    features: ["Solid & Engineered", "25+ Wood Species", "Lifetime Warranty"],
-    priceRange: "$4.99 - $12.99/sq ft",
-    image: "hardwood",
+    name: "SPC Vinyl Planks",
+    description: "Ultimate durability with stone polymer core technology",
+    features: ["100% Waterproof", "Stone Polymer Core", "Commercial Grade", "Pet & Kid Friendly"],
+    image: "spc",
     popular: true,
+    new: true,
   },
   {
     id: 2,
-    name: "Luxury Vinyl Plank",
-    description: "Waterproof durability meets stunning design",
-    features: ["100% Waterproof", "Pet Friendly", "DIY Installation"],
-    priceRange: "$2.99 - $6.99/sq ft",
-    image: "vinyl",
+    name: "Laminate Flooring",
+    description: "Beautiful wood-look flooring with exceptional value",
+    features: ["AC4/AC5 Rated", "Scratch Resistant", "Easy Click Installation", "Wide Plank Options"],
+    image: "laminate",
     popular: true,
   },
   {
     id: 3,
-    name: "Porcelain & Ceramic Tile",
-    description: "Versatile designs for any room",
-    features: ["Heat Resistant", "Easy Maintenance", "Endless Styles"],
-    priceRange: "$1.99 - $8.99/sq ft",
-    image: "tile",
+    name: "Luxury Vinyl Plank (LVP)",
+    description: "Premium waterproof flooring with realistic textures",
+    features: ["Waterproof Core", "Embossed Textures", "Sound Reduction", "DIY Friendly"],
+    image: "lvp",
   },
   {
     id: 4,
-    name: "Premium Carpet",
-    description: "Comfort and warmth underfoot",
-    features: ["Stain Resistant", "Sound Absorption", "Soft & Plush"],
-    priceRange: "$1.49 - $5.99/sq ft",
-    image: "carpet",
+    name: "Hardwood Flooring",
+    description: "Timeless elegance with authentic natural wood",
+    features: ["Solid & Engineered", "Multiple Species", "Hand-Scraped Options", "Refinishable"],
+    image: "hardwood",
   },
   {
     id: 5,
-    name: "Laminate Flooring",
-    description: "Affordable beauty that lasts",
-    features: ["Scratch Resistant", "Easy Install", "Wood Look"],
-    priceRange: "$0.99 - $3.99/sq ft",
-    image: "laminate",
+    name: "Porcelain & Ceramic Tile",
+    description: "Versatile designs from classic to contemporary",
+    features: ["Wood Look Tiles", "Large Format", "Indoor/Outdoor", "Easy Maintenance"],
+    image: "tile",
   },
   {
     id: 6,
+    name: "WPC Vinyl Flooring",
+    description: "Wood Plastic Composite for superior stability",
+    features: ["Waterproof", "Dimensional Stability", "Quiet Underfoot", "Temperature Resistant"],
+    image: "wpc",
+  },
+  {
+    id: 7,
     name: "Natural Stone",
-    description: "Luxury and durability from nature",
-    features: ["Marble & Granite", "Unique Patterns", "Premium Quality"],
-    priceRange: "$6.99 - $24.99/sq ft",
+    description: "Premium marble, granite, and travertine",
+    features: ["Unique Patterns", "Lifetime Durability", "Heat Resistant", "Adds Property Value"],
     image: "stone",
+  },
+  {
+    id: 8,
+    name: "Hybrid Flooring",
+    description: "Next-gen flooring combining best technologies",
+    features: ["Rigid Core", "Ultra Stable", "Acoustic Backing", "Lifetime Warranty"],
+    image: "hybrid",
   },
 ];
 
@@ -73,11 +82,18 @@ const ProductCategories = () => {
               key={category.id}
               className="group relative bg-card rounded-lg overflow-hidden shadow-medium hover:shadow-large transition-all duration-300"
             >
-              {category.popular && (
-                <div className="absolute top-4 right-4 z-10 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                  Popular
-                </div>
-              )}
+              <div className="absolute top-4 right-4 z-10 flex gap-2">
+                {category.popular && (
+                  <div className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                    Popular
+                  </div>
+                )}
+                {category.new && (
+                  <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                    New
+                  </div>
+                )}
+              </div>
 
               {/* Category Image Placeholder */}
               <div className="h-48 bg-gradient-to-br from-muted to-muted/50 relative overflow-hidden">
@@ -91,17 +107,13 @@ const ProductCategories = () => {
                 <h3 className="text-2xl font-semibold text-foreground mb-2">{category.name}</h3>
                 <p className="text-muted-foreground mb-4">{category.description}</p>
 
-                <div className="space-y-2 mb-4">
+                <div className="space-y-2 mb-6">
                   {category.features.map((feature, index) => (
                     <div key={index} className="flex items-center text-sm text-muted-foreground">
                       <span className="w-1.5 h-1.5 bg-accent rounded-full mr-2"></span>
                       {feature}
                     </div>
                   ))}
-                </div>
-
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-lg font-semibold text-foreground">{category.priceRange}</span>
                 </div>
 
                 <Button variant="outline" className="w-full group">
