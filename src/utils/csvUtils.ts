@@ -292,3 +292,159 @@ export const exportProductsToCsv = (products: ProductData[]) => {
   document.body.removeChild(link);
   window.URL.revokeObjectURL(url);
 };
+
+// Additional exports for BulkProductImport component
+export const parseCSV = (csvText: string): any[] => {
+  const lines = csvText.split('\n').filter(line => line.trim());
+  if (lines.length < 2) return [];
+  
+  const headers = lines[0].split(',').map(h => h.trim());
+  const products = [];
+  
+  for (let i = 1; i < lines.length; i++) {
+    const values = parseCsvLine(lines[i]);
+    const product: any = {};
+    
+    headers.forEach((header, index) => {
+      let value = values[index] || '';
+      // Remove quotes if present
+      if (value.startsWith('"') && value.endsWith('"')) {
+        value = value.slice(1, -1).replace(/""/g, '"');
+      }
+      
+      // Convert to appropriate types
+      const lowerHeader = header.toLowerCase();
+      if (lowerHeader.includes('price') || lowerHeader.includes('qty') || lowerHeader.includes('weight') || lowerHeader.includes('quantity')) {
+        product[header.replace(/\s+/g, '')] = parseFloat(value) || 0;
+      } else if (lowerHeader === 'published') {
+        product.published = value.toLowerCase() === 'true';
+      } else {
+        product[header.replace(/\s+/g, '')] = value;
+      }
+    });
+    
+    // Add unique ID if not present
+    if (!product.id) {
+      product.id = `prod-${Date.now()}-${i}`;
+    }
+    
+    products.push(product);
+  }
+  
+  return products;
+};
+
+export const generateCSVTemplate = (): string => {
+  const headers = [
+    'Handle',
+    'Title', 
+    'Description',
+    'Vendor',
+    'Product Type',
+    'Tags',
+    'Published',
+    'Variant SKU',
+    'Variant Price',
+    'Variant Compare Price',
+    'Variant Inventory Qty',
+    'Variant Inventory Policy',
+    'Variant Weight',
+    'Variant Weight Unit',
+    'Image URL',
+    'SEO Title',
+    'SEO Description',
+    'Status',
+    'Category',
+    'Material',
+    'Size',
+    'Color',
+    'Finish',
+    'Thickness',
+    'Warranty',
+    'Installation'
+  ];
+  
+  const sampleRow = [
+    'luxury-vinyl-oak',
+    'Luxury Vinyl Plank - Oak Heritage',
+    'Waterproof luxury vinyl plank with realistic oak texture',
+    'Premium Floors Co',
+    'Luxury Vinyl Plank',
+    'waterproof;oak;lvp;residential',
+    'true',
+    'LVP-OAK-001',
+    '4.99',
+    '6.99',
+    '5000',
+    'continue',
+    '2.5',
+    'lb',
+    'https://example.com/image.jpg',
+    'Oak Heritage LVP Flooring',
+    'Premium waterproof oak LVP flooring',
+    'active',
+    'Luxury Vinyl',
+    'Vinyl Composite',
+    '7" x 48"',
+    'Natural Oak',
+    'Matte',
+    '8mm',
+    '25 years',
+    'Click-lock'
+  ];
+  
+  return headers.join(',') + '\n' + sampleRow.join(',');
+};
+
+export const exportToCSV = (products: any[]): string => {
+  if (!products || products.length === 0) return '';
+  
+  const headers = [
+    'id',
+    'handle',
+    'title',
+    'description',
+    'vendor',
+    'productType',
+    'tags',
+    'published',
+    'variantSKU',
+    'variantPrice',
+    'variantComparePrice',
+    'variantInventoryQty',
+    'variantInventoryPolicy',
+    'variantWeight',
+    'variantWeightUnit',
+    'imageUrl',
+    'seoTitle',
+    'seoDescription',
+    'status',
+    'category',
+    'material',
+    'size',
+    'color',
+    'finish',
+    'thickness',
+    'warranty',
+    'installation'
+  ];
+  
+  const csvHeaders = headers.join(',');
+  
+  const csvRows = products.map(product => {
+    return headers.map(header => {
+      const value = product[header];
+      
+      if (value === undefined || value === null) return '';
+      
+      // Handle values that contain commas or quotes
+      if (typeof value === 'string' && (value.includes(',') || value.includes('"'))) {
+        return `"${value.replace(/"/g, '""')}"`;
+      }
+      
+      return value;
+    }).join(',');
+  });
+  
+  return [csvHeaders, ...csvRows].join('\n');
+};
