@@ -80,16 +80,13 @@ export function SnipcartProduct({
   );
 }
 
-// Cart Summary Component
 export function SnipcartCartSummary() {
   return (
-    <div className="snipcart-summary flex items-center gap-4">
-      <button className="snipcart-checkout flex items-center gap-2 text-sm">
-        <ShoppingCart className="h-4 w-4" />
-        <span className="snipcart-items-count">0</span> items
-        <span className="snipcart-total-price font-semibold">$0.00</span>
-      </button>
-    </div>
+    <button className="snipcart-checkout relative inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors">
+      <ShoppingCart className="h-5 w-5" />
+      <span className="snipcart-items-count bg-primary text-primary-foreground rounded-full px-2 py-0.5 text-xs font-bold">0</span>
+      <span className="snipcart-total-price font-semibold">$0.00</span>
+    </button>
   );
 }
 
