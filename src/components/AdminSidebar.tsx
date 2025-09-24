@@ -39,7 +39,7 @@ const menuItems = [
   },
   {
     title: "Snipcart E-commerce",
-    url: "/admin/shopify",
+    url: "/admin/snipcart",
     icon: ShoppingBag,
   },
 ];
