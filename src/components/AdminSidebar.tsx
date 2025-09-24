@@ -38,7 +38,7 @@ const menuItems = [
     icon: Package,
   },
   {
-    title: "Shopify Integration",
+    title: "Snipcart E-commerce",
     url: "/admin/shopify",
     icon: ShoppingBag,
   },

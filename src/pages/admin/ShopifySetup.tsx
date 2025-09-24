@@ -1,5 +1,5 @@
-import { ShopifyIntegration } from "@/components/ShopifyIntegration";
+import { SnipcartIntegration } from "@/components/SnipcartIntegration";
 
 export default function ShopifySetup() {
-  return <ShopifyIntegration />;
+  return <SnipcartIntegration />;
 }
