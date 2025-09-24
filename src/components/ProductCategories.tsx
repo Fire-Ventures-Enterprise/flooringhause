@@ -27,13 +27,6 @@ const categories = [
     image: "lvp",
   },
   {
-    id: 4,
-    name: "Hardwood Flooring",
-    description: "Timeless elegance with authentic natural wood",
-    features: ["Solid & Engineered", "Multiple Species", "Hand-Scraped Options", "Refinishable"],
-    image: "hardwood",
-  },
-  {
     id: 5,
     name: "Porcelain & Ceramic Tile",
     description: "Versatile designs from classic to contemporary",
