@@ -11,6 +11,7 @@ import Rankings from "./pages/admin/Rankings";
 import Competitors from "./pages/admin/Competitors";
 import SiteAudit from "./pages/admin/SiteAudit";
 import Products from "./pages/admin/Products";
+import ShopifySetup from "./pages/admin/ShopifySetup";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="competitors" element={<Competitors />} />
             <Route path="audit" element={<SiteAudit />} />
             <Route path="products" element={<Products />} />
+            <Route path="shopify" element={<ShopifySetup />} />
           </Route>
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

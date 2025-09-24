@@ -1,4 +1,4 @@
-import { BarChart3, Search, Globe, FileSearch, Home, Package } from "lucide-react";
+import { BarChart3, Search, Globe, FileSearch, Home, Package, ShoppingBag } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
@@ -36,6 +36,11 @@ const menuItems = [
     title: "Product Management",
     url: "/admin/products",
     icon: Package,
+  },
+  {
+    title: "Shopify Integration",
+    url: "/admin/shopify",
+    icon: ShoppingBag,
   },
 ];
 

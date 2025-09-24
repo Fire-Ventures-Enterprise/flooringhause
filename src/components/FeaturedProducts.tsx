@@ -9,13 +9,14 @@ const products = {
     {
       id: 1,
       name: "Oak Heritage Wide Plank",
-      category: "Hardwood",
+      category: "Hardwood", 
       price: "$8.99",
       originalPrice: "$10.99",
       unit: "sq ft",
       sale: true,
       rating: 4.8,
       reviews: 234,
+      shopifyProductId: "7857989632173", // Add your actual Shopify product ID
     },
     {
       id: 2,
