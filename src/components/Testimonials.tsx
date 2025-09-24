@@ -13,7 +13,7 @@ const testimonials = [
     name: "Sarah Johnson",
     location: "Toronto, ON",
     rating: 5,
-    text: "FlooringHaus transformed our entire home with beautiful hardwood floors. The quality is exceptional and the installation team was professional and efficient.",
+    text: "FlooringHouse transformed our entire home with beautiful hardwood floors. The quality is exceptional and the installation team was professional and efficient.",
     project: "Whole Home Renovation",
   },
   {
@@ -37,7 +37,7 @@ const testimonials = [
     name: "David Thompson",
     location: "Montreal, QC",
     rating: 5,
-    text: "The quality of the natural stone flooring is incredible. FlooringHaus made the entire process seamless and stress-free.",
+    text: "The quality of the natural stone flooring is incredible. FlooringHouse made the entire process seamless and stress-free.",
     project: "Luxury Bathroom",
   },
 ];
@@ -51,7 +51,7 @@ const Testimonials = () => {
             What Our Customers Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of satisfied homeowners who transformed their spaces with FlooringHaus
+            Join thousands of satisfied homeowners who transformed their spaces with FlooringHouse
           </p>
         </div>
 

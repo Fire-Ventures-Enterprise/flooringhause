@@ -37,7 +37,7 @@ const Rankings = () => {
           'X-API-Key': 'your_api_key'
         },
         body: JSON.stringify({
-          domain: 'flooringhause.com',
+          domain: 'flooringhouse.com',
           keywords: [newKeyword],
           location: filterLocation
         })
