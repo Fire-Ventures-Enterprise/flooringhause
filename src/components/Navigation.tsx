@@ -40,7 +40,7 @@ const Navigation = () => {
               <span className="text-warm-white font-bold text-xl font-serif">F</span>
             </div>
             <div>
-              <h1 className="text-xl font-serif font-bold text-foreground">FlooringHouse</h1>
+              <h1 className="text-xl font-serif font-bold text-foreground">FlooringHause</h1>
               <p className="text-xs text-muted-foreground">Premium Flooring Solutions</p>
             </div>
           </Link>

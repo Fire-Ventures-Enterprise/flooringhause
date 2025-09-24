@@ -38,7 +38,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="mb-6">
-                <h2 className="text-2xl font-serif font-bold mb-2">FlooringHouse</h2>
+                <h2 className="text-2xl font-serif font-bold mb-2">FlooringHause</h2>
                 <p className="text-warm-white/80">
                   Premium flooring solutions for Canadian homes. Quality, service, and style since 2009.
                 </p>
@@ -55,7 +55,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="h-4 w-4 text-accent" />
-                  <span className="text-warm-white/80">info@flooringhouse.com</span>
+                  <span className="text-warm-white/80">info@flooringhause.com</span>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-warm-white/60 text-sm">
-              © 2024 FlooringHouse. All rights reserved.
+              © 2024 FlooringHause. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-warm-white/60 hover:text-warm-white transition-colors">Privacy Policy</a>
