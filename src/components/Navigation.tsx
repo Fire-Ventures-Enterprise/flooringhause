@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Search, ShoppingCart, Phone } from "lucide-react";
+import { SnipcartCartSummary } from "@/components/SnipcartProduct";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,12 +64,7 @@ const Navigation = () => {
             <Button variant="ghost" size="icon">
               <Search className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" className="relative">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-4 w-4 bg-accent text-accent-foreground rounded-full text-xs flex items-center justify-center">
-                0
-              </span>
-            </Button>
+            <SnipcartCartSummary />
             <Button variant="minimal">Get Quote</Button>
           </div>
 
