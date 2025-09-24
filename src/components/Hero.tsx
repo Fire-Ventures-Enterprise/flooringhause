@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, TrendingUp } from "lucide-react";
 import heroImage from "@/assets/hero-flooring.jpg";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-subtle">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_50%_50%,_hsl(var(--wood-light))_0%,_transparent_100%)]"></div>
@@ -15,9 +13,7 @@ const Hero = () => {
           {/* Trust Badges */}
           <div className="flex items-center justify-center gap-6 mb-8">
             <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-accent text-accent" />
-              ))}
+              {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-accent text-accent" />)}
               <span className="text-sm text-muted-foreground ml-2">4.9/5 (2,847 Reviews)</span>
             </div>
             <div className="hidden md:flex items-center gap-2 text-sm text-muted-foreground">
@@ -34,10 +30,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Discover exceptional quality hardwood, tile, vinyl, and carpet flooring. 
-            Professional installation and lifetime warranty available.
-          </p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">Discover exceptional quality tile, vinyl, and SPC flooring. </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -45,9 +38,7 @@ const Hero = () => {
               Browse Collections
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-              Book Free Consultation
-            </Button>
+            
           </div>
 
           {/* Feature Cards */}
@@ -70,8 +61,6 @@ const Hero = () => {
 
       {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
