@@ -5,6 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/input";
 import { SnipcartProduct } from "./SnipcartProduct";
 import { Search, Filter } from "lucide-react";
+import { sampleProducts } from "@/utils/sampleProducts";
 
 interface Product {
   id: string;
@@ -39,6 +40,27 @@ export function ProductDisplay() {
       const parsed = JSON.parse(storedProducts);
       setProducts(parsed);
       setFilteredProducts(parsed);
+    } else {
+      // Use sample products if no products in localStorage
+      const mappedSampleProducts = sampleProducts.map(p => ({
+        id: p.id,
+        sku: `SKU-${p.id}`,
+        name: p.name,
+        category: p.category,
+        description: p.description || "",
+        price: p.price,
+        salePrice: p.salePrice,
+        imageUrl: p.imageUrl,
+        inStock: p.stockStatus !== "Out of Stock",
+        brand: p.brand,
+        material: p.material,
+        size: p.sqftPerBox ? `${p.sqftPerBox} sq ft/box` : undefined,
+        features: p.warranty ? `Warranty: ${p.warranty}` : undefined
+      }));
+      setProducts(mappedSampleProducts);
+      setFilteredProducts(mappedSampleProducts);
+      // Save sample products to localStorage for persistence
+      localStorage.setItem("flooring_products", JSON.stringify(mappedSampleProducts));
     }
     setLoading(false);
   }, []);
