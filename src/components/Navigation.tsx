@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Search, ShoppingCart, Phone } from "lucide-react";
 import { SnipcartCartSummary } from "@/components/SnipcartProduct";
+import logoDark from "@/assets/logo-dark.png";
+import logoLight from "@/assets/logo-light.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,14 +38,17 @@ const Navigation = () => {
 
         {/* Main Navigation */}
         <div className="flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="h-10 w-10 bg-gradient-wood rounded flex items-center justify-center">
-              <span className="text-warm-white font-bold text-xl font-serif">F</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-serif font-bold text-foreground">FlooringHause</h1>
-              <p className="text-xs text-muted-foreground">Premium Flooring Solutions</p>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logoDark} 
+              alt="FlooringHause" 
+              className="h-12 w-auto dark:hidden"
+            />
+            <img 
+              src={logoLight} 
+              alt="FlooringHause" 
+              className="h-12 w-auto hidden dark:block"
+            />
           </Link>
 
           {/* Desktop Navigation */}

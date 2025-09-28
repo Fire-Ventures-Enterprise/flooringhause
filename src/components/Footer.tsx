@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import logoLight from "@/assets/logo-light.png";
 
 const Footer = () => {
   return (
@@ -38,7 +39,11 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="mb-6">
-                <h2 className="text-2xl font-serif font-bold mb-2">FlooringHause</h2>
+                <img 
+                  src={logoLight} 
+                  alt="FlooringHause" 
+                  className="h-14 w-auto mb-4"
+                />
                 <p className="text-warm-white/80">
                   Premium flooring solutions for Canadian homes. Quality, service, and style since 2009.
                 </p>
