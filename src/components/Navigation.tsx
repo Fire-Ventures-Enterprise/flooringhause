@@ -42,12 +42,12 @@ const Navigation = () => {
             <img 
               src={logoDark} 
               alt="FlooringHause" 
-              className="h-12 w-auto dark:hidden"
+              className="h-16 w-auto dark:hidden"
             />
             <img 
               src={logoLight} 
               alt="FlooringHause" 
-              className="h-12 w-auto hidden dark:block"
+              className="h-16 w-auto hidden dark:block"
             />
           </Link>
 
