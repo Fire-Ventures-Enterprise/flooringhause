@@ -37,17 +37,17 @@ const Navigation = () => {
         </div>
 
         {/* Main Navigation */}
-        <div className="flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center">
+        <div className="flex items-center justify-between h-16 py-2">
+          <Link to="/" className="flex items-center h-full">
             <img 
               src={logoDark} 
               alt="FlooringHause" 
-              className="h-20 w-auto dark:hidden"
+              className="h-12 w-auto object-contain dark:hidden"
             />
             <img 
               src={logoLight} 
               alt="FlooringHause" 
-              className="h-20 w-auto hidden dark:block"
+              className="h-12 w-auto object-contain hidden dark:block"
             />
           </Link>
 
