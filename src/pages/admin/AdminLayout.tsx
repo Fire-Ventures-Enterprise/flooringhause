@@ -1,8 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AdminSidebar } from "@/components/AdminSidebar";
-import logoDark from "@/assets/logo-dark.png";
-import logoLight from "@/assets/logo-light.png";
+import logo from "@/assets/fh-logo.png";
 
 const AdminLayout = () => {
   return (
@@ -14,14 +13,9 @@ const AdminLayout = () => {
             <SidebarTrigger />
             <div className="ml-4 flex items-center gap-3">
               <img 
-                src={logoDark} 
+                src={logo} 
                 alt="FlooringHause Admin" 
-                className="h-8 w-auto dark:hidden"
-              />
-              <img 
-                src={logoLight} 
-                alt="FlooringHause Admin" 
-                className="h-8 w-auto hidden dark:block"
+                className="h-8 w-auto dark:invert"
               />
               <span className="text-lg font-semibold">Admin Dashboard</span>
             </div>

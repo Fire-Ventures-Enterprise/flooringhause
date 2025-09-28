@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Search, ShoppingCart, Phone } from "lucide-react";
 import { SnipcartCartSummary } from "@/components/SnipcartProduct";
-import logoDark from "@/assets/logo-dark.png";
-import logoLight from "@/assets/logo-light.png";
+import logo from "@/assets/fh-logo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,14 +39,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20 py-3">
           <Link to="/" className="flex items-center h-full">
             <img 
-              src={logoDark} 
+              src={logo} 
               alt="FlooringHause" 
-              className="h-14 w-auto object-contain dark:hidden"
-            />
-            <img 
-              src={logoLight} 
-              alt="FlooringHause" 
-              className="h-14 w-auto object-contain hidden dark:block"
+              className="h-10 w-auto object-contain dark:invert"
             />
           </Link>
 
